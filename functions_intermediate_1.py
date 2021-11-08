@@ -60,10 +60,11 @@ dojo = {
 }
 
 def printInfo(some_dict):
-    for i in some_dict:
-        if i == 'locations':
-            print("LOCATIONS")
-        if i == 'instructors':
-            print('INSTRUCTORS')
+    x = 0
+    for key,val in some_dict.items():
+        print(f"{len(val)} {key.upper()}")
+        for x in range(0, len(val)):
+            print(val[x])
+            x += 1
 
 printInfo(dojo)
